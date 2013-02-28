@@ -12,7 +12,7 @@
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:finished_by) %></th>
-      <th><%= model_class.human_attribute_name(:by_whom) %></th>
+      <th>Deliverer</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>

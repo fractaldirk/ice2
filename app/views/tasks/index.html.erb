@@ -21,7 +21,7 @@
       <tr>
         <td><%= task.kind_output %></td>
         <td><%= link_to task.title, task_path(task) %></td>
-        <td><%= task.description %></td>
+        <td><%= truncate(task.description, :length => 225) %></td>
         <td><%= task.finished_by.strftime("%d %B %Y") unless task.finished_by.nil? %></td>
         <td><%= task.by_whom_output %></td>
         <td>

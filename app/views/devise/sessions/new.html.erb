@@ -1,19 +1,38 @@
-<div class="signin">
-  <h2>Sign in</h2>
+  <div class="container">
+    <div class="row">
+      <div class="span4">
+        <h2>Sign in</h2>
 
-  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-    <div><%= f.label :email %><br />
-    <%= f.email_field :email, :autofocus => true %></div>
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <div><%= f.label :email %><br />
+          <%= f.email_field :email, :autofocus => true %></div>
 
-    <div><%= f.label :password %><br />
-    <%= f.password_field :password %></div>
+          <div><%= f.label :password %><br />
+          <%= f.password_field :password %></div>
 
-    <% if devise_mapping.rememberable? -%>
-      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-    <% end -%>
+          <% if devise_mapping.rememberable? -%>
+            <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+          <% end -%>
 
-    <div><%= f.submit "Sign in" %></div>
-  <% end %>
+          <div><%= f.submit "Sign in" %></div>
+        <% end %>
 
-  <%= render "devise/shared/links" %>
-</div>
+        <%= render "devise/shared/links" %>
+      </div>
+      <div class="span6">
+        <br/>
+        <br/>
+        <br/>
+        <blockquote>
+          <p>“The reason birds can fly and we can't is simply because they have perfect faith, for to have faith is to have wings.” </p>
+          <small>J.M. Barrie - <cite title="Source Title"><%= link_to 'Goodreads.com', "http://www.goodreads.com/quotes/tag/birds", "target" => "_blank" %></cite></small>
+          <br/>
+          <p>“…I keep looking for one more teacher, only to find that fish learn from the water and birds learn from the sky.” </p>
+          <small>Mark Nepo - <cite title="Source Title"><%= link_to 'Goodreads.com (Facing the lion, Being the lion)', "http://www.goodreads.com/work/quotes/1050093", "target" => "_blank" %></cite></small>
+          <br/>
+          <p>“Birds know themselves not to be at the center of anything, but at the margins of everything. The end of the map. We only live where someone's horizon sweeps someone else's. We are only noticed on the edge of things; but on the edge of things, we notice much.”  </p>
+          <small>Gregory Maguire - <cite title="Source Title"><%= link_to 'Goodreads.com (Out of Oz)', "http://www.goodreads.com/work/quotes/15502514", "target" => "_blank" %></cite></small>
+        </blockquote>
+      </div>
+    </div>
+  </div>

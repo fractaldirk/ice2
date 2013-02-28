@@ -3,5 +3,5 @@
     <% if task.by_whom.to_i == current_user.id && task.status == 1 %>
       <h5><%= link_to task.title, task %> - <%= task.finished_by.strftime("%d %b %Y") unless task.finished_by.nil? %></h5>
       <p><%= simple_format task.description %></p>
-    <% end %>
+    <% end %><hr />
   <% end %>

@@ -1,1 +1,83 @@
-<h1>Work in progress</h1>
+<h1>Project Description</h1>
+<p><em>(Work in progress)</em></p>
+
+<p>Participants: <%= User.order(:id).map(&:user_name).join(", ") %></p>
+
+<p>
+The Blue Robin project is an IceFlag initiated project tailored for Greenpeace. This project will focus on the aiding of the implementation of their competency framework. A job description builder will be delivered which will be built by IceFlag.
+</p>
+
+<h2>(1.1) Project goal</h2>
+<p>
+<strong>IceFlag:</strong>  To provide a professional tool which aids daily human resource practices in organisations all over the world.<br/>
+<strong>Greenpeace:</strong> To aid the implementation of the competency framework.
+</p>
+
+<h3>(1.2) Outcome</h3>
+<p>
+IceFlag will deliver the software Blue Robin which is tailored to the needs of Greenpeace.
+</p>
+<p><strong>Quality output:</strong></p>
+<p>
+The Blue Robin Project must meet the quality standards established in the quality baseline. The quality baseline is the baseline which provides the acceptable quality levels of the Blue Robin Project. The software must meet or exceed the quality baseline values in order to achieve success.
+<table class="table-striped">
+  <tr>
+    <th>Topic</th>
+    <th>Acceptable level</th>
+    <th>Tools</th>
+  </tr>
+  <tr>
+    <td>Code</td>
+    <td>No errors in the code of the software</td>
+    <td>Using a test framework</td>
+  </tr>
+  <tr>
+    <td>Strategy</td>
+    <td>Able to explain the link with strategic HR</td>
+    <td>Using the project website</td>
+  </tr>
+  <tr class="success">
+    <td>Acceptance</td>
+    <td>3 or more offices would like to implement Blue Robin during phase II</td>
+    <td>This will be the end deliverable of the project</td>
+  </tr>
+</table>
+</p>
+
+<h2>(1.3) Scope</h2>
+<p>
+The software will be tested within Greenpeace Brussels. It will contain the following functions: multi-lingual competency dictionary, exporting public and internal JD and job JD stealing.
+</p>
+<h4>(1.3.1) Phases</h4>
+<p>
+The best solution would likely to run at least two phases. Phase 1 would include developing the job editor and testing it within Greenpeace Belgium.
+The second phase would consist of trails in other offices, training/providing documentation for the IT department on managing the application and more (e.g. building tutorial for JD writing).
+</p>
+<h4>(1.3.2) Phase I</h4>
+<p><strong>Development:</strong></p>
+<p>
+In phase one the Job description editor will be developed. This application would include the following key functions:
+<ul>
+<li>Multi-lingual competency dictionary</li>
+<li>Various JD template generation</li>
+<li>Job stealing</li>
+</ul>
+The functions will be mapped out and developed accordingly.
+</p>
+<p><strong>Organisational readiness:</strong></p>
+<p>
+After the development phase the focus is on organisational readiness for Greenpeace Belgium. This would include HR and IT readiness.
+</p>
+<h4>(1.3.3) Phase II</h4>
+<p>
+This phase focuses on running trials in various other offices.
+</p>
+<h2>(1.4) Duration</h2>
+<h4>(1.4.1) First 3 months</h4>
+<p>
+It would take 2-3 months to finish phase I. After phase I a period of real-life testing begins and capturing the data back. Alongside organisational readiness can be created within the other trial offices (e.g. translating the application in another language).
+</p>
+<h4>(1.4.2) After 6 months</h4>
+<p>
+Phase II would start after 6 months. Data traffic needs to be monitored just like IT support. Likely this period takes more or less 6 months which allows IceFlag to continuously update the existing version and deploy newer versions.
+</p>
