@@ -1,24 +1,5 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :user_name %><br />
-  <%= f.text_field :user_name %></div>
-
-  <div><%= f.label :user_role %><br />
-  <%= f.select(:user_role, [['Admin', '1'], ['Client', '2']], :prompt => 'Define role please') %></div>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<p>This action is unavailable for general users/participants. Please send an e-mail @ bluerobinproject@gmail.com to request an user account.</p>
+<p>Thank you for your understanding,</p>
+<p>The Blue Robin team.</p>
