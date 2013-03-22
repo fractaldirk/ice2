@@ -7,8 +7,8 @@ class UserMailer < ActionMailer::Base
   #   en.user_mailer.post_confirmation.subject
   #
   def post_confirmation(forum)
-  @forum = forum
+    @forum = forum
 
-  mail to: User.order(:id).map(&:email).join(", "), subject: "Blue Robin activity log: new post created"
+    mail to: User.order(:id).map(&:email).join(", "), subject: "Blue Robin activity log: new post created"
   end
 end
