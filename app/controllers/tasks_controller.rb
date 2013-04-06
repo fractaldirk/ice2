@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @incomplete_tasks = Task.find(:all, :order => "finished_by ASC", :conditions => {:status => '1'})
-    @completed_tasks = Task.find(:all, :order => "finished_by ASC", :conditions => {:status => '2'})
+    @completed_tasks = Task.find(:all, :order => "finished_by DESC", :conditions => {:status => '2'})
 
     respond_to do |format|
       format.html # index.html.erb

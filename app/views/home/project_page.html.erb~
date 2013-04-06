@@ -4,7 +4,7 @@
 <p>Participants: <%= User.order(:id).map(&:user_name).join(", ") %></p>
 
 <p>
-The Blue Robin project is an IceFlag initiated project tailored for Greenpeace. This project will focus on the aiding of the implementation of their competency framework. A job description builder will be delivered which will be built by IceFlag.
+The Blue Robin project is an IceFlag initiated project tailored for Greenpeace. This project will focus on the aiding of the implementation of the first stage of their competency framework. A job description builder will be delivered which will be built by IceFlag.
 </p>
 
 <h2>(1.1) Project goal</h2>
@@ -20,7 +20,7 @@ IceFlag will deliver the software Blue Robin which is tailored to the needs of G
 <p><strong>Quality output:</strong></p>
 <p>
 The Blue Robin Project must meet the quality standards established in the quality baseline. The quality baseline is the baseline which provides the acceptable quality levels of the Blue Robin Project. The software must meet or exceed the quality baseline values in order to achieve success.
-<table class="table-striped">
+<table class="table table-striped">
   <tr>
     <th>Topic</th>
     <th>Acceptable level</th>
@@ -75,9 +75,12 @@ This phase focuses on running trials in various other offices.
 <h2>(1.4) Duration</h2>
 <h4>(1.4.1) First 3 months</h4>
 <p>
-It would take 2-3 months to finish phase I. After phase I a period of real-life testing begins and capturing the data back. Alongside organisational readiness can be created within the other trial offices (e.g. translating the application in another language).
+It would take 1-2 months to finish phase I. After phase I a period of real-life testing begins and capturing the data back. Alongside organisational readiness can be created within the other trial offices (e.g. translating the application in another language).
+</p>
+<p>
+Phase II would start after 2 months. Data traffic needs to be monitored just like IT support. Likely this period takes more or less 2 months which allows IceFlag to continuously update the existing version and deploy newer versions.
 </p>
 <h4>(1.4.2) After 6 months</h4>
 <p>
-Phase II would start after 6 months. Data traffic needs to be monitored just like IT support. Likely this period takes more or less 6 months which allows IceFlag to continuously update the existing version and deploy newer versions.
+Software readiness.
 </p>
