@@ -27,7 +27,7 @@
 
 <% if @forum.comments.present? %>
   <h4 style="color: navy;">Comments</h4>
-  <%= render @forum.comments %>
+  <%= render @forum.comments.order('created_at ASC') %>
 <% end %>
 
 
