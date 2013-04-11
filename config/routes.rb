@@ -1,4 +1,6 @@
 Projectmgmt::Application.routes.draw do
+  resources :versions
+
   devise_for :users
 
   get "home/index"
@@ -11,6 +13,9 @@ Projectmgmt::Application.routes.draw do
   resources :tasks
 
   resources :milestones
+
+  get "tickets/overview"
+  resources :tickets
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

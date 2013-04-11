@@ -23,6 +23,7 @@
             <li><%= link_to "Posts", forums_path %></li>
             <li><%= link_to "Tasks", tasks_path %></li>
             <li><%= link_to "Milestones", milestones_path %></li>
+            <li><%= link_to "Ticket center", tickets_overview_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>

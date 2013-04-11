@@ -1,0 +1,32 @@
+<%= form_for @ticket, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select(:status, [['Untouched', '1'], ['In progress', '2'], ['Solved', '3']]) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select(:description, [['Site ErroR', '1'], ['User interface', '2'], ['Layout/Styling', '3'], ['(application) Performace', '4'], ['Other', '5']], :prompt => "Please define type of issue") %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :content, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :content, :class => 'text_area', :placeholder => "Please state here other information like possible solutions or a link if you are running into an error. Thanks, you help is much appreciated!" %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                tickets_path, :class => 'btn' %>
+  </div>
+<% end %>

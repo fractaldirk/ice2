@@ -2,14 +2,16 @@
   <div class="container">
     <div class="row">
       <div class="span9">
-      <p><%= User.order(:id).map(&:user_name).join(", ") %></p>
       <%= render "my_tasks" %>
-      <%= render "latest_posts" %>
       </div>
       <div class="span3">
         <h4>Upcoming Milestone</h4>
           <% @milestones.each do |milestone| %>
             <%= link_to milestone.deliverable, milestone %> (<%= milestone.finished_by.strftime("%d %b %Y") unless milestone.finished_by.nil? %>)
+          <% end %>
+        <h4>Current App Version</h4>
+          <% @versions.each do |version| %>
+            <%= link_to version.title, version %> (Since: <%= version.deployed_at.strftime("%d %b %Y") unless version.deployed_at.nil? %>)
           <% end %>
       </div>
     </div>

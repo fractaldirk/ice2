@@ -1,8 +1,10 @@
 Projectmgmt::Application.routes.draw do
+  resources :tickets
+
   devise_for :users
 
   get "home/index"
-  get "home/projectpage" => 'home#project_page'
+  get "home/project-page" => 'home#project_page'
 
   resources :forums do
     resources :comments
