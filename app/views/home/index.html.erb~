@@ -1,10 +1,13 @@
 <h1>The Blue Robin project</h1>
   <div class="container">
+  <p><strong>The application can be found <%= link_to 'here (bluerobin.com)', "http://mybluerobin.com/" %> or <%= link_to 'here (direct link)', "http://bluerobin1.herokuapp.com/" %>.</strong></p>
     <div class="row">
       <div class="span9">
       <%= render "my_tasks" %>
       <hr />
-      <%= render "latest_tickets" %>
+      <% if @tickets.present? %>
+        <%= render "latest_tickets" %>
+      <% end %>
       </div>
       <div class="span3">
         <h4>Upcoming Milestone</h4>
