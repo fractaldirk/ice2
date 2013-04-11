@@ -4,7 +4,9 @@
       <div class="span9">
       <%= render "my_tasks" %>
       <hr />
-      <%= render "latest_tickets" %>
+      <% if @tickets.present? %>
+        <%= render "latest_tickets" %>
+      <% end %>
       </div>
       <div class="span3">
         <h4>Upcoming Milestone</h4>
