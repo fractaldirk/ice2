@@ -2,6 +2,9 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
   <%= link_to 'Back', tickets_overview_path, :class => 'btn btn-primary' %>
+  <%= link_to t('.new', :default => t("helpers.links.new")),
+            tickets_public_path,
+            :class => 'btn btn-primary' %>
 </div>
 <table class="table table-striped">
   <thead>
@@ -35,7 +38,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_ticket_path,
-            :class => 'btn btn-primary' %>

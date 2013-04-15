@@ -15,6 +15,8 @@ Projectmgmt::Application.routes.draw do
   resources :milestones
 
   get "tickets/overview"
+  get "tickets/new_public"
+  get "tickets/public"
   resources :tickets
 
   # The priority is based upon order of creation:

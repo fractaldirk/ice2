@@ -1,5 +1,5 @@
 class TicketsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:overview, :index, :new, :create, :show]
+  before_filter :authenticate_user!, :except => [:overview, :new_public, :create, :public]
   # GET /tickets
   # GET /tickets.json
   def index
@@ -44,12 +44,17 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(params[:ticket])
 
     respond_to do |format|
-      if @ticket.save
-        format.html { redirect_to @ticket, notice: 'Ticket was successfully created.' }
-        format.json { render json: @ticket, status: :created, location: @ticket }
+      if params[:public_form]
+        @ticket.save
+          format.html { redirect_to tickets_public_path }
       else
-        format.html { render action: "new" }
-        format.json { render json: @ticket.errors, status: :unprocessable_entity }
+        if @ticket.save
+          format.html { redirect_to @ticket, notice: 'Ticket was successfully created.' }
+          format.json { render json: @ticket, status: :created, location: @ticket }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @ticket.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -80,6 +85,14 @@ class TicketsController < ApplicationController
       format.html { redirect_to tickets_url }
       format.json { head :no_content }
     end
+  end
+
+  def new_public
+    @ticket = Ticket.new
+  end
+
+  def public
+
   end
 
   def overview
